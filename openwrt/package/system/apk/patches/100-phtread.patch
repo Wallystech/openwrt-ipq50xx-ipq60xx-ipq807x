@@ -1,0 +1,12 @@
+diff -urN apk-2021-07-23-3d203e8f.orig/src/Makefile apk-2021-07-23-3d203e8f/src/Makefile
+--- apk-2021-07-23-3d203e8f.orig/src/Makefile	2021-07-25 12:55:05.576564663 +0200
++++ apk-2021-07-23-3d203e8f/src/Makefile	2021-07-25 12:55:48.660862181 +0200
+@@ -87,7 +87,7 @@
+ apk.static-libs		:= $(apk-static-libs)
+ LDFLAGS_apk.static	:= -static
+ LIBS_apk.static		:= -Wl,--as-needed -ldl -Wl,--no-as-needed
+-LDFLAGS_apk		+= -L$(obj)
++LDFLAGS_apk		+= -L$(obj) -pthread
+ LDFLAGS_apk-test	+= -L$(obj)
+ 
+ CFLAGS_ALL		+= $(OPENSSL_CFLAGS) $(ZLIB_CFLAGS)

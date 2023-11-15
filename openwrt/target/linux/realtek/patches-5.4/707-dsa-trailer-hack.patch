@@ -1,0 +1,44 @@
+diff -urpN linux-5.4.139.old/include/net/dsa.h linux-5.4.139/include/net/dsa.h
+--- linux-5.4.139.old/include/net/dsa.h	2021-08-12 11:07:00.456095739 +0700
++++ linux-5.4.139/include/net/dsa.h	2021-08-12 11:11:24.556448045 +0700
+@@ -43,6 +43,7 @@ struct phylink_link_state;
+ #define DSA_TAG_PROTO_SJA1105_VALUE		13
+ #define DSA_TAG_PROTO_KSZ8795_VALUE		14
+ #define DSA_TAG_PROTO_RTL4_A_VALUE		17
++#define DSA_TAG_PROTO_RTL83XX_VALUE		18
+ 
+ enum dsa_tag_protocol {
+ 	DSA_TAG_PROTO_NONE		= DSA_TAG_PROTO_NONE_VALUE,
+@@ -61,6 +62,7 @@ enum dsa_tag_protocol {
+ 	DSA_TAG_PROTO_SJA1105		= DSA_TAG_PROTO_SJA1105_VALUE,
+ 	DSA_TAG_PROTO_KSZ8795		= DSA_TAG_PROTO_KSZ8795_VALUE,
+ 	DSA_TAG_PROTO_RTL4_A		= DSA_TAG_PROTO_RTL4_A_VALUE,
++	DSA_TAG_PROTO_RTL83XX		= DSA_TAG_PROTO_RTL83XX_VALUE,
+ };
+ 
+ struct packet_type;
+diff -urpN linux-5.4.139.old/net/dsa/Kconfig linux-5.4.139/net/dsa/Kconfig
+--- linux-5.4.139.old/net/dsa/Kconfig	2021-08-12 11:08:44.196228650 +0700
++++ linux-5.4.139/net/dsa/Kconfig	2021-08-12 11:09:01.260252005 +0700
+@@ -120,4 +120,10 @@ config NET_DSA_TAG_TRAILER
+ 	  Say Y or M if you want to enable support for tagging frames at
+ 	  with a trailed. e.g. Marvell 88E6060.
+ 
++config NET_DSA_TAG_RTL83XX
++	tristate "Tag driver for RTL83XX switches"
++	help
++	  Say Y or M if you want to enable support for tagging frames for
++	    the RTL83XX chipsets.
++
+ endif
+diff -urpN linux-5.4.139.old/net/dsa/Makefile linux-5.4.139/net/dsa/Makefile
+--- linux-5.4.139.old/net/dsa/Makefile	2021-08-12 11:08:44.196228650 +0700
++++ linux-5.4.139/net/dsa/Makefile	2021-08-12 11:09:01.260252005 +0700
+@@ -15,3 +15,4 @@ obj-$(CONFIG_NET_DSA_TAG_MTK) += tag_mtk
+ obj-$(CONFIG_NET_DSA_TAG_QCA) += tag_qca.o
+ obj-$(CONFIG_NET_DSA_TAG_SJA1105) += tag_sja1105.o
+ obj-$(CONFIG_NET_DSA_TAG_TRAILER) += tag_trailer.o
++obj-$(CONFIG_NET_DSA_TAG_RTL83XX) += tag_rtl83xx.o
+\ No newline at end of file
+diff -urpN linux-5.4.139.old/net/dsa/tag_rtl83xx.c linux-5.4.139/net/dsa/tag_rtl83xx.c
+diff -urpN linux-5.4.139.old/net/dsa/tag_trailer.c linux-5.4.139/net/dsa/tag_trailer.c

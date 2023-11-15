@@ -1,0 +1,21 @@
+Index: a/scripts/netifd-wireless.sh
+===================================================================
+--- a/scripts/netifd-wireless.sh
++++ b/scripts/netifd-wireless.sh
+@@ -252,11 +252,14 @@ wireless_vif_parse_encryption() {
+ 			auth_type=owe
+ 		;;
+ 		wpa3-mixed*)
+-			auth_type=eap-eap192
++			auth_type=eap-eap256
+ 		;;
+-		wpa3*)
++		wpa3-192*)
+ 			auth_type=eap192
+ 		;;
++		wpa3*)
++			auth_type=eap256
++		;;
+ 		psk3-mixed*|sae-mixed*)
+ 			auth_type=psk-sae
+ 		;;

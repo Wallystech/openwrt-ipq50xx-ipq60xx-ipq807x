@@ -1,0 +1,150 @@
+Index: linux-5.4.111/drivers/net/dsa/rtl83xx/common.c
+===================================================================
+--- linux-5.4.111.orig/drivers/net/dsa/rtl83xx/common.c
++++ linux-5.4.111/drivers/net/dsa/rtl83xx/common.c
+@@ -1609,6 +1609,17 @@ static int __init rtl83xx_sw_probe(struc
+ 		rtl930x_dbgfs_init(priv);
+ 	}
+ 
++	if (of_machine_is_compatible("edgecore,ecs4100-12ph")) {
++		sw_w32(0x000000FF, 0x110);
++		sw_w32(0x00000000, 0x114);
++		sw_w32(0x00000000, 0x118);
++		sw_w32(0x000f0000, 0x11c);
++		sw_w32(0x00000000, 0x120);
++		sw_w32(0x000f0000, 0x124);
++		sw_w32(0x3DEA, 0xec);
++		sw_w32(0x707568, 0xe4);
++	}
++
+ 	return 0;
+ 
+ err_register_fib_nb:
+Index: linux-5.4.111/drivers/net/phy/rtl83xx-phy.c
+===================================================================
+--- linux-5.4.111.orig/drivers/net/phy/rtl83xx-phy.c
++++ linux-5.4.111/drivers/net/phy/rtl83xx-phy.c
+@@ -1439,6 +1439,14 @@ static int rtl8380_configure_rtl8214fc(s
+ 		write_phy(mac + i, 0xfff, 0x1e, 0x0000);
+ 	}
+ 
++	if (of_machine_is_compatible("edgecore,ecs4100-12ph")) {
++		printk("setting edgecore specific SFP modes\n");
++		rtl8380_rtl8214fc_media_set(mac + 0, 0);
++		rtl8380_rtl8214fc_media_set(mac + 1, 0);
++		rtl8380_rtl8214fc_media_set(mac + 2, 1);
++		rtl8380_rtl8214fc_media_set(mac + 3, 1);
++	}
++
+ 	return 0;
+ }
+ 
+Index: linux-5.4.111/arch/mips/rtl838x/setup.c
+===================================================================
+--- linux-5.4.111.orig/arch/mips/rtl838x/setup.c
++++ linux-5.4.111/arch/mips/rtl838x/setup.c
+@@ -46,21 +46,6 @@ static void rtl838x_restart(char *comman
+ 	sw_w32(1, RTL838X_RST_GLB_CTRL_1);
+ }
+ 
+-static void rtl839x_restart(char *command)
+-{
+-	/* SoC reset vector (in flash memory): on RTL839x platform preferred way to reset */
+-	void (*f)(void) = (void *) 0xbfc00000;
+-
+-	pr_info("System restart.\n");
+-	/* Reset SoC */
+-	sw_w32(0xFFFFFFFF, RTL839X_RST_GLB_CTRL);
+-	/* and call reset vector */
+-	f();
+-	/* If this fails, halt the CPU */
+-	while
+-		(1);
+-}
+-
+ static void rtl930x_restart(char *command)
+ {
+ 	pr_info("System restart.\n");
+@@ -109,8 +94,6 @@ static void __init rtl838x_setup(void)
+ static void __init rtl839x_setup(void)
+ {
+ 	pr_info("Registering _machine_restart\n");
+-	_machine_restart = rtl839x_restart;
+-	_machine_halt = rtl838x_halt;
+ 
+ 	/* Setup System LED. Bit 14 of RTL839X_LED_GLB_CTRL then allows to toggle it */
+ 	sw_w32_mask(0, 3 << 15, RTL839X_LED_GLB_CTRL);
+@@ -141,7 +124,6 @@ void __init plat_mem_setup(void)
+ 	void *dtb;
+ 
+ 	set_io_port_base(KSEG1);
+-	_machine_restart = rtl838x_restart;
+ 
+ 	if (fw_passed_dtb) /* UHI interface */
+ 		dtb = (void *)fw_passed_dtb;
+Index: linux-5.4.111/drivers/gpio/edgecore_reboot.c
+===================================================================
+--- /dev/null
++++ linux-5.4.111/drivers/gpio/edgecore_reboot.c
+@@ -0,0 +1,61 @@
++// SPDX-License-Identifier: GPL-2.0-only
++/* Copyright (C) 2021 John Crispin <john@phrozen.org> */
++#include <linux/delay.h>
++#include <linux/io.h>
++#include <linux/notifier.h>
++#include <linux/of_address.h>
++#include <linux/of_device.h>
++#include <linux/platform_device.h>
++#include <linux/reboot.h>
++#include <linux/module.h>
++#include <linux/gpio.h>
++#include <linux/gpio/consumer.h>
++
++static struct notifier_block edgecore_reboot_handler;
++static struct gpio_desc *gpiod;
++static int edgecore_reboot_handle(struct notifier_block *this,
++					unsigned long mode, void *cmd)
++{
++	gpiod_direction_output(gpiod, 0);
++	mdelay(1000);
++
++	pr_emerg("Unable to restart system\n");
++	return NOTIFY_DONE;
++}
++
++static int __init edgecore_reboot_probe(struct platform_device *pdev)
++{
++	int err;
++        unsigned long flags = GPIOF_IN;
++
++	gpiod = devm_gpiod_get_index(&pdev->dev, NULL, 0, flags);
++        if (!IS_ERR(gpiod))
++                gpiod_set_consumer_name(gpiod, "reboot");
++	else
++		return -EPROBE_DEFER;
++
++	edgecore_reboot_handler.notifier_call = edgecore_reboot_handle;
++	edgecore_reboot_handler.priority = 255;
++	err = register_restart_handler(&edgecore_reboot_handler);
++	if (err)
++		printk("can't register restart notifier (err=%d)\n", err);
++
++
++	return 0;
++}
++
++static const struct of_device_id edgecore_reboot_of_ids[] = {
++	{ .compatible = "edgecore,reboot"},
++	{ /* sentinel */ }
++};
++
++
++static struct platform_driver edgecore_reboot_driver = {
++	.probe = edgecore_reboot_probe,
++	.driver = {
++		.name = "edgecore_reboot",
++		.of_match_table = edgecore_reboot_of_ids,
++	},
++};
++
++module_platform_driver(edgecore_reboot_driver);

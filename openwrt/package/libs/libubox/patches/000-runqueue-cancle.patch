@@ -1,0 +1,12 @@
+Index: libubox-2022-05-15-d2223ef9/runqueue.c
+===================================================================
+--- libubox-2022-05-15-d2223ef9.orig/runqueue.c
++++ libubox-2022-05-15-d2223ef9/runqueue.c
+@@ -228,7 +228,6 @@ void runqueue_task_complete(struct runqu
+ 	safe_list_del(&t->list);
+ 	t->queued = false;
+ 	t->running = false;
+-	t->cancelled = false;
+ 	if (t->complete)
+ 		t->complete(q, t);
+ 	runqueue_start_next(q);

@@ -1,0 +1,66 @@
+#!/bin/sh
+
+. /lib/functions.sh
+. /lib/functions/uci-defaults.sh
+. /lib/functions/system.sh
+
+ucidef_set_poe() {
+	json_select_object poe
+		json_add_string "budget" "$1"
+		json_select_array ports
+			for port in $2; do
+				json_add_string "" "$port"
+			done
+		json_select ..
+	json_select ..
+}
+
+board=$(board_name)
+board_config_update
+
+lan_list=""
+for lan in $(ls -d /sys/class/net/lan* | cut -dn -f3 |sort -n); do
+	lan_list="$lan_list lan$lan"
+done
+ucidef_set_bridge_device switch
+ucidef_set_interface_wan "$lan_list"
+
+lan_mac=""
+wan_mac=""
+label_mac=""
+case $board in
+*)
+	wan_mac=$(mtd_get_mac_ascii u-boot-env ethaddr)
+	lan_mac=$(macaddr_add $wan_mac 1)
+	label_mac=$lan_mac
+	;;
+esac
+
+ucidef_set_interface_macaddr "wan" $wan_mac
+ucidef_set_bridge_mac "$wan_mac"
+ucidef_set_network_device_mac eth0 $wan_mac
+for lan in $lan_list; do
+	ucidef_set_network_device_mac $lan $lan_mac
+	lan_mac=$(macaddr_add $lan_mac 1)
+done
+[ -n "$label_mac" ] && ucidef_set_label_macaddr $label_mac
+
+case $board in
+edgecore,ecs4100-12ph)
+	ucidef_set_poe 130 "lan1 lan2 lan3 lan4 lan5 lan6 lan7 lan8"
+	;;
+netgear,gs110tpp-v1)
+	ucidef_set_poe 130 "$lan_list"
+	;;
+zyxel,gs1900-10hp)
+	ucidef_set_poe 77 "$lan_list"
+	;;
+zyxel,gs1900-8hp-v1|\
+zyxel,gs1900-8hp-v2)
+	ucidef_set_poe 70 "$lan_list"
+	;;
+esac
+
+board_config_flush
+
+exit 0

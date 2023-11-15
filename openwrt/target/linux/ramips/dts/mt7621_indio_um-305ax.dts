@@ -1,0 +1,146 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+
+#include "mt7621.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+
+/ {
+	compatible = "indio,um-305ax", "mediatek,mt7621-soc";
+	model = "INDIO UM-305AX";
+
+	aliases {
+		led-boot = &led_green;
+		led-failsafe = &led_red;
+		led-running = &led_blue;
+		led-upgrade = &led_red;
+		label-mac-device = &wan_port;
+	};
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
+		bootargs-override = "console=ttyS0,115200";
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		led_blue: blue {
+			label = "blue";
+			gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+		};
+
+		led_red: red {
+			label = "red";
+			gpios = <&gpio 23 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+		};
+
+		led_green: green {
+			label = "green";
+			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
+		};
+	};
+
+	keys {
+		compatible = "gpio-keys-polled";
+		poll-interval = <50>;
+		pinctrl-names = "default";
+
+		reset {
+			label = "reset";
+			gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_RESTART>;
+		};
+	};
+};
+
+&state_default {
+	gpio {
+		groups = "rgmii2";
+		function = "gpio";
+	};
+};
+
+&pcie {
+	status = "okay";
+};
+
+&pcie1 {
+	wifi@0,0 {
+		reg = <0x0 0 0 0 0>;
+		mediatek,mtd-eeprom = <&factory 0x0>;
+	};
+};
+
+&gmac0 {
+	mtd-mac-address = <&factory 0x4>;
+};
+
+&switch0 {
+	ports {
+		wan_port: port@0 {
+			status = "okay";
+			label = "wan";
+			mtd-mac-address = <&factory 0x28>;
+		};
+
+		port@1 {
+			status = "okay";
+			label = "lan";
+		};
+	};
+};
+
+&spi0 {
+	status = "okay";
+
+	flash@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0>;
+		spi-max-frequency = <50000000>;
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "u-boot";
+				reg = <0x0 0x30000>;
+				read-only;
+			};
+
+			partition@30000 {
+				label = "u-boot-env";
+				reg = <0x30000 0x10000>;
+				read-only;
+			};
+
+			partition@40000 {
+				label = "product";
+				reg = <0x40000 0x10000>;
+				read-only;
+			};
+
+			factory: partition@50000 {
+				label = "factory";
+				reg = <0x50000 0x40000>;
+				read-only;
+			};
+			partition@90000 {
+				compatible = "denx,fit";
+				label = "firmware";
+				reg = <0x90000 0xf60000>;
+			};
+
+		        partition@ff0000 {
+                                 label = "certificates";
+                                 reg = <0xff0000 0x10000>;
+                       };
+
+		};
+	};
+};
+

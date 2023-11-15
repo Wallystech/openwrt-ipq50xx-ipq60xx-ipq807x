@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/uspot/Makefile
+
+Package: uspot
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +spotfilter +uhttpd-mod-ucode +libradcli +iptables-mod-conntrack-extra +conntrack +ucode-mod-math +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-uloop +ratelimit
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: hotspot daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: hotspot daemon
+John Crispin <john@phrozen.org>
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/tip/firstcontact/Makefile
+
+Package: firstcontact
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libcurl +libopenssl +certificates
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: TIP DigiCert firstcontact
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: TIP DigiCert firstcontact
+John Crispin <john@phrozen.org>
+@@
+
+

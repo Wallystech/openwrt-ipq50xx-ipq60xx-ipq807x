@@ -1,0 +1,8 @@
+---
+description: Add the wifi support AX targets
+feeds:
+  - name: wifi_ax
+    path: ../../feeds/wifi-ax_v5.4
+packages:
+  - wireless-regdb
+  - ethtool

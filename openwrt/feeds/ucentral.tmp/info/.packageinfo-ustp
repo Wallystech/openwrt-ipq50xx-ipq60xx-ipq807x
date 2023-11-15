@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/ustp/Makefile
+
+Package: ustp
+Version: 2021-08-27-25555611be916da7fe8cb53f85c741a51ddffa1c-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: OpenWrt STP/RSTP daemon
+Maintainer: Felix Fietkau <nbd@nbd.name
+Source: ustp-2021-08-27-25555611be916da7fe8cb53f85c741a51ddffa1c.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt STP/RSTP daemon
+Felix Fietkau <nbd@nbd.name
+@@
+
+

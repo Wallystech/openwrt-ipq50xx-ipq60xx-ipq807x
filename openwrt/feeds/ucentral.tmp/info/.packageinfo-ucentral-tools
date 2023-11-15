@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/ucentral-tools/Makefile
+
+Package: ucentral-tools
+Version: 2021-01-28-b013fc636e48d407870a46aaa68a09ed74de8d6f-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libcurl +libradcli +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: ucentral tools collection
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-tools-2021-01-28-b013fc636e48d407870a46aaa68a09ed74de8d6f.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: ucentral tools collection
+John Crispin <john@phrozen.org>
+@@
+
+

@@ -1,0 +1,1093 @@
+Source-Makefile: feeds/wifi_ax/ath11k-wifi/Makefile
+
+Package: ath11k-wifi-cig-wf188
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF188
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF188 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF188.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf186w
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF186w
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF186w requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF186w.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf186h
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF186h
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF186h requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF186h.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf660a
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF660a
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF660a requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF660a.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf194c
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF194c
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF194c requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF194c.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf194c4
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF194c4
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF194c4 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF194c4.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf196-ca
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF196 CA
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF196 CA requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF196 CA.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cig-wf196-us
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Cigtech WF196 US
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Cigtech WF196 US requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Cigtech WF196 US.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cybertan-eww622-a1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for CyberTan EWW622 A1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The CyberTan EWW622 A1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the CyberTan EWW622 A1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cybertan-eww631-a1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for CyberTan EWW631 A1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The CyberTan EWW631 A1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the CyberTan EWW631 A1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-cybertan-eww631-b1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for CyberTan EWW631 B1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The CyberTan EWW631 B1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the CyberTan EWW631 B1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-edgecore-eap101
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for EdgeCore EAP101
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The EdgeCore EAP101 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the EdgeCore EAP101.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-gl-ax1800
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: gl-ax1800 bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: gl-ax1800 bdf
+
+@@
+
+Package: ath11k-wifi-gl-axt1800
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: gl-axt1800 bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: gl-axt1800 bdf
+
+@@
+
+Package: ath11k-wifi-sercomm-wallaby
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Sercomm Kiwi
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Sercomm Kiwi requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Sercomm Kiwi.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-edgecore-eap102
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Edgecore EAP102
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Edgecore EAP102 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Edgecore EAP102.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-edgecore-eap104
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Edgecore EAP104
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Edgecore EAP104 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Edgecore EAP104.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-liteon-wpx8324
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Liteon WPX8324
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Liteon WPX8324 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Liteon WPX8324.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-indio-um-310ax-v1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Indio UM-310AX V1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Indio UM-310AX V1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Indio UM-310AX V1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-indio-um-510axp-v1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Indio UM-510AXP V1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Indio UM-510AXP V1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Indio UM-510AXP V1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-indio-um-510axm-v1
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Indio UM-510AXM V1
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Indio UM-510AXM V1 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Indio UM-510AXM V1.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-muxi-ap3220l
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227 ath11k-wifi-tplink-ex447 ath11k-wifi-yuncore-ax840 ath11k-wifi-meshpp-s618
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for MUXI AP3220L
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The MUXI AP3220L requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the MUXI AP3220L.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-plasmacloud-pax1800
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: plasmacloud-pax1800(-v2) bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: plasmacloud-pax1800(-v2) bdf
+
+@@
+
+Package: ath11k-wifi-wallys-dr5018-9074
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Wallys Dr5018 9074
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Wallys Dr5018 9074 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Wallys Dr5018 9074.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-wallys-dr5018
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Wallys Dr5018
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Wallys Dr5018 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Wallys Dr5018.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-wallys-dr6018
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Wallys DR6018
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Wallys DR6018 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Wallys DR6018.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-wallys-dr6018-v4
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Wallys DR6018 V4
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Wallys DR6018 V4 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Wallys DR6018 V4.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-tplink-ex227
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for TP-Link EX227
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The TP-Link EX227 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the TP-Link EX227.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-tplink-ex447
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for TP-Link EX447
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The TP-Link EX447 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the TP-Link EX447.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-yuncore-ax840
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227 ath11k-wifi-tplink-ex447
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for YunCore AX840
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The YunCore AX840 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the YunCore AX840.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-yuncore-fap650
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227 ath11k-wifi-tplink-ex447 ath11k-wifi-yuncore-ax840 ath11k-wifi-meshpp-s618 ath11k-wifi-muxi-ap3220l
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for YunCore FAP650
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The YunCore FAP650 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the YunCore FAP650.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-yuncore-fap655
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227 ath11k-wifi-tplink-ex447 ath11k-wifi-yuncore-ax840 ath11k-wifi-meshpp-s618 ath11k-wifi-muxi-ap3220l ath11k-wifi-yuncore-fap650
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for YunCore FAP655
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The YunCore FAP655 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the YunCore FAP655.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-meshpp-s618
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: ath11k-wifi-cig-wf188 ath11k-wifi-cig-wf186w ath11k-wifi-cig-wf186h ath11k-wifi-cig-wf660a ath11k-wifi-cig-wf194c ath11k-wifi-cig-wf194c4 ath11k-wifi-cig-wf196-ca ath11k-wifi-cig-wf196-us ath11k-wifi-cybertan-eww622-a1 ath11k-wifi-cybertan-eww631-a1 ath11k-wifi-cybertan-eww631-b1 ath11k-wifi-sercomm-wallaby ath11k-wifi-wallys-dr5018-9074 ath11k-wifi-wallys-dr5018 ath11k-wifi-wallys-dr6018 ath11k-wifi-wallys-dr6018-v4 ath11k-wifi-edgecore-eap101 ath11k-wifi-edgecore-eap102 ath11k-wifi-edgecore-eap104 ath11k-wifi-liteon-wpx8324 ath11k-wifi-indio-um-310ax-v1 ath11k-wifi-indio-um-510axp-v1 ath11k-wifi-indio-um-510axm-v1 ath11k-wifi-tplink-ex227 ath11k-wifi-tplink-ex447 ath11k-wifi-yuncore-ax840
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: bdwlan.bin Overrides for Mesh++ S618
+Maintainer: 
+Source: 
+Type: ipkg
+Description: The Mesh++ S618 requires board-specific, reference ("cal") data
+that is not yet present in the upstream wireless firmware distribution.
+
+This package supplies bdwlan.bin file(s) that, in the interim,
+overwrite those supplied by the ath11k-firmware-* packages.
+
+This is package is only necessary for the Mesh++ S618.
+
+Do not install it for any other device!
+
+@@
+
+Package: ath11k-wifi-qcom-ipq5018
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: board-2.bin for QCOM IPQ50xx eval kits
+Maintainer: 
+Source: 
+Type: ipkg
+Description: board-2.bin for QCOM IPQ50xx eval kits
+
+@@
+
+Package: ath11k-wifi-qcom-ipq6122
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: board-2.bin for QCOM IPQ6122 eval kits
+Maintainer: 
+Source: 
+Type: ipkg
+Description: board-2.bin for QCOM IPQ6122 eval kits
+
+@@
+
+Package: ath11k-wifi-qcom-ipq8074
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: board-2.bin for QCOM IPQ807x eval kits
+Maintainer: 
+Source: 
+Type: ipkg
+Description: board-2.bin for QCOM IPQ807x eval kits
+
+@@
+
+Package: ath11k-wifi-qcom-ipq6018
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: board-2.bin for QCOM IPQ60xx eval kits
+Maintainer: 
+Source: 
+Type: ipkg
+Description: board-2.bin for QCOM IPQ60xx eval kits
+
+@@
+
+Package: ath11k-wifi-qcom-qcn9000
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: board-2.bin for QCOM QCN9000 eval kits
+Maintainer: 
+Source: 
+Type: ipkg
+Description: board-2.bin for QCOM QCN9000 eval kits
+
+@@
+
+Package: ath11k-wifi-cig-wf188n-ca
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: cig-wf188n bdf CA
+Maintainer: 
+Source: 
+Type: ipkg
+Description: cig-wf188n bdf CA
+
+@@
+
+Package: ath11k-wifi-cig-wf188n-us
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: cig-wf188n bdf US
+Maintainer: 
+Source: 
+Type: ipkg
+Description: cig-wf188n bdf US
+
+@@
+
+Package: ath11k-wifi-cig-wf196_6g-ca
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: cig-wf196 6G bdf CA
+Maintainer: 
+Source: 
+Type: ipkg
+Description: cig-wf196 6G bdf CA
+
+@@
+
+Package: ath11k-wifi-cig-wf196_6g-us
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: cig-wf196 6G bdf US
+Maintainer: 
+Source: 
+Type: ipkg
+Description: cig-wf196 6G bdf US
+
+@@
+
+Package: ath11k-wifi-motorola-q14
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: motorola q14 bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: motorola q14 bdf
+
+@@
+
+Package: ath11k-wifi-xunison-d50
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: xunison d50 bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: xunison d50 bdf
+
+@@
+
+Package: ath11k-wifi-hfcl-ion4xi
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: hfcl-ion4xi bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: hfcl-ion4xi bdf
+
+@@
+
+Package: ath11k-wifi-hfcl-ion4xi_wp
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: hfcl-ion4xi_wp bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: hfcl-ion4xi_wp bdf
+
+@@
+
+Package: ath11k-wifi-hfcl-ion4xi_w
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: hfcl-ion4xi_w bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: hfcl-ion4xi_w bdf
+
+@@
+
+Package: ath11k-wifi-hfcl-ion4x_w
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: hfcl-ion4x_w bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: hfcl-ion4x_w bdf
+
+@@
+
+Package: ath11k-wifi-hfcl-ion4xi_HMR
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: hfcl-ion4xi_HMR bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: hfcl-ion4xi_HMR bdf
+
+@@
+
+Package: ath11k-wifi-edgecore-oap101
+Submenu: ath11k Board-Specific Overrides
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: edgecore oap101 bdf
+Maintainer: 
+Source: 
+Type: ipkg
+Description: edgecore oap101 bdf
+
+@@
+
+

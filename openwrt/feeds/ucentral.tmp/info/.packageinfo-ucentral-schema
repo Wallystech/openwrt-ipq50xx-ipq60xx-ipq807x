@@ -1,0 +1,39 @@
+Source-Makefile: feeds/ucentral/ucentral-schema/Makefile
+
+Package: ucentral-recovery
+Version: 2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral recovery tooling
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-schema-2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral recovery tooling
+John Crispin <john@phrozen.org>
+@@
+
+Package: ucentral-schema
+Version: 2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode-mod-nl80211 +ucode-mod-rtnl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral schema
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-schema-2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral schema
+John Crispin <john@phrozen.org>
+@@
+
+

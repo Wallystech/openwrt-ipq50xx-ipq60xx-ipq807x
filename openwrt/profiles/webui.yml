@@ -1,0 +1,20 @@
+---
+description: Add the webui dependencies
+feeds:
+  - name: luci
+    uri: https://github.com/openwrt/luci.git
+    revision: 69231a7d62a3b809fc5972071e691fb02730a10e
+packages:
+  - cgi-io
+  - liblucihttp
+  - lua
+  - luci-base
+  - luci-mod-ucentral
+  - luci-theme-ucentral
+  - rpcd
+  - rpcd-mod-file
+  - rpcd-mod-iwinfo
+  - rpcd-mod-luci
+  - rpcd-mod-rrdns
+  - uhttpd
+  - uhttpd-mod-ubus

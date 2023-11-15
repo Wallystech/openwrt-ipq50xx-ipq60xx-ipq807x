@@ -1,0 +1,6 @@
+$(eval $(call PackageDir,certificates,certificates,))
+$(eval $(call PackageDir,firstcontact,firstcontact,))
+$(eval $(call PackageDir,luci_luci-mod-ucentral,luci/luci-mod-ucentral,))
+$(eval $(call PackageDir,luci_luci-theme-ucentral,luci/luci-theme-ucentral,))
+$(eval $(call PackageDir,maverick,maverick,))
+$(eval $(call PackageDir,tip-defaults,tip-defaults,))

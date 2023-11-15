@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/radius-gw-proxy/Makefile
+
+Package: radius-gw-proxy
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: uCentral Gateway radius-gw-proxy
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: uCentral Gateway radius-gw-proxy
+John Crispin <john@phrozen.org>
+@@
+
+

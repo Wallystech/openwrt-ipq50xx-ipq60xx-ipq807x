@@ -1,0 +1,808 @@
+Source-Makefile: feeds/ipq807x/ipq807x/Makefile
+Target: ipq807x
+Target-Board: ipq807x
+Target-Name: Qualcomm Atheros AX
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7
+Target-Features: arm_v7 display dt gpio nand pci pcie ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a7
+Linux-Version: 4.4.60
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-qca-nss-dp kmod-qca-ssdk swconfig kmod-qca-nss-drv kmod-usb-phy-ipq807x kmod-usb-dwc3-of-simple kmod-ath11k-ahb kmod-qrtr_mproc wpad kmod-gpio-button-hotplug kmod-bootconfig qca-thermald-10.4 qca-ssdk-shell uboot-envtools iwinfo
+Target: ipq807x/ipq807x
+Target-Board: ipq807x
+Target-Name: IPQ807x based boards
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7
+Target-Features: arm_v7 display dt gpio nand pci pcie ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a7
+Linux-Version: 4.4.60
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+        Build images for IPQ807x systems.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd ath11k-firmware-ipq807x qca-nss-fw-ipq807x dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-qca-nss-dp kmod-qca-ssdk swconfig kmod-qca-nss-drv kmod-usb-phy-ipq807x kmod-usb-dwc3-of-simple kmod-ath11k-ahb kmod-qrtr_mproc wpad kmod-gpio-button-hotplug kmod-bootconfig qca-thermald-10.4 qca-ssdk-shell uboot-envtools iwinfo
+Target-Profile: Default
+Target-Profile-Name: Default Profile (minimum package set)
+Target-Profile-Packages:  
+Target-Profile-Description:
+Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_qcom_hk01
+Target-Profile-Name: Qualcomm Hawkeye HK01
+Target-Profile-Packages: ath11k-wifi-qcom-ipq8074 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq807x-hk01
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm Hawkeye HK01
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_hk14
+Target-Profile-Name: Qualcomm Hawkeye HK14
+Target-Profile-Packages: ath11k-wifi-qcom-ipq8074 kmod-ath11k-pci ath11k-firmware-qcn9000 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq807x-hk14
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm Hawkeye HK14
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf194
+Target-Profile-Name: CIG WF194C
+Target-Profile-Packages: ath11k-wifi-cig-wf194c aq-fw-download uboot-envtools kmod-usb3 kmod-usb2 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf194c
+
+
+Target-Profile-Description:
+Build firmware images for CIG WF194C
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf194c4
+Target-Profile-Name: CIG WF194C4
+Target-Profile-Packages: ath11k-wifi-cig-wf194c4 aq-fw-download uboot-envtools kmod-usb3 kmod-usb2 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf194c4
+
+
+Target-Profile-Description:
+Build firmware images for CIG WF194C4
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf196_us
+Target-Profile-Name: CIG WF196 (US)
+Target-Profile-Packages: ath11k-wifi-cig-wf196-us aq-fw-download uboot-envtools kmod-usb3 kmod-usb2 ath11k-firmware-qcn9000 ath11k-wifi-cig-wf196_6g-us zephyr-v3.3.x-hci_uart-cig_wf196_nrf52833 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf196
+
+
+Target-Profile-Description:
+Build firmware images for CIG WF196 (US)
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf196_ca
+Target-Profile-Name: CIG WF196 (CA)
+Target-Profile-Packages: ath11k-wifi-cig-wf196-ca aq-fw-download uboot-envtools kmod-usb3 kmod-usb2 ath11k-firmware-qcn9000 ath11k-wifi-cig-wf196_6g-ca zephyr-v3.3.x-hci_uart-cig_wf196_nrf52833 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf196
+
+
+Target-Profile-Description:
+Build firmware images for CIG WF196 (CA)
+
+
+
+@@
+
+Target-Profile: DEVICE_edgecore_eap102
+Target-Profile-Name: Edgecore EAP102
+Target-Profile-Packages: ath11k-wifi-edgecore-eap102 kmod-usb2 kmod-usb3 uboot-envtools zephyr-v3.3.x-hci_usb-edgecore_eap102_nrf52840 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: edgecore,eap102
+
+
+Target-Profile-Description:
+Build firmware images for Edgecore EAP102
+
+
+
+@@
+
+Target-Profile: DEVICE_edgecore_eap106
+Target-Profile-Name: Edgecore EAP106
+Target-Profile-Packages: ath11k-wifi-edgecore-eap106 aq-fw-download kmod-usb2 kmod-usb3 uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: edgecore,eap106
+
+
+Target-Profile-Description:
+Build firmware images for Edgecore EAP106
+
+
+
+@@
+
+Target-Profile: DEVICE_tplink_ex227
+Target-Profile-Name: TP-Link EX227
+Target-Profile-Packages: ath11k-wifi-tplink-ex227 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,ex227
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link EX227
+
+
+
+@@
+
+Target-Profile: DEVICE_tplink_ex447
+Target-Profile-Name: TP-Link EX447
+Target-Profile-Packages: ath11k-wifi-tplink-ex447 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,ex447
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link EX447
+
+
+
+@@
+
+Target: ipq807x/ipq60xx
+Target-Board: ipq807x
+Target-Name: IPQ60xx based boards
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7
+Target-Features: arm_v7 display dt gpio nand pci pcie ramdisk rtc squashfs usb virtio
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a7
+Linux-Version: 4.4.60
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+        Build images for IPQ60xx systems.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd ath11k-firmware-ipq60xx qca-nss-fw-ipq60xx dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-qca-nss-dp kmod-qca-ssdk swconfig kmod-qca-nss-drv kmod-usb-phy-ipq807x kmod-usb-dwc3-of-simple kmod-ath11k-ahb kmod-qrtr_mproc wpad kmod-gpio-button-hotplug kmod-bootconfig qca-thermald-10.4 qca-ssdk-shell uboot-envtools iwinfo
+Target-Profile: Default
+Target-Profile-Name: Default Profile (minimum package set)
+Target-Profile-Packages:  
+Target-Profile-Description:
+Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_cig_wf660a
+Target-Profile-Name: Cigtech WF-660a
+Target-Profile-Packages: ath11k-wifi-cig-wf660a uboot-env uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf660a
+
+
+Target-Profile-Description:
+Build firmware images for Cigtech WF-660a
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf188n-ca
+Target-Profile-Name: Cigtech WF-188n
+Target-Profile-Packages: ath11k-wifi-cig-wf188n-ca uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf188n
+
+
+Target-Profile-Description:
+Build firmware images for Cigtech WF-188n
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf188n-us
+Target-Profile-Name: Cigtech WF-188n
+Target-Profile-Packages: ath11k-wifi-cig-wf188n-us uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf188n
+
+
+Target-Profile-Description:
+Build firmware images for Cigtech WF-188n
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4xe
+Target-Profile-Name: HFCL ION4Xe
+Target-Profile-Packages: ath11k-wifi-qcom-ipq6018 uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4xe
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4Xe
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4x
+Target-Profile-Name: HFCL ION4X
+Target-Profile-Packages: ath11k-wifi-qcom-ipq6018 uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4x
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4X
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4x_2
+Target-Profile-Name: HFCL ION4X_2
+Target-Profile-Packages: ath11k-wifi-qcom-ipq6018 uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4x_2
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4X_2
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4xi
+Target-Profile-Name: HFCL ION4Xi
+Target-Profile-Packages: ath11k-wifi-hfcl-ion4xi uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4xi
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4Xi
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4xi_wp
+Target-Profile-Name: HFCL ION4Xi_WP
+Target-Profile-Packages: ath11k-wifi-hfcl-ion4xi_wp uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4xi_wp
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4Xi_WP
+
+
+
+@@
+
+Target-Profile: DEVICE_edgecore_eap101
+Target-Profile-Name: EdgeCore EAP101
+Target-Profile-Packages: ath11k-wifi-edgecore-eap101 uboot-envtools -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 kmod-usb2 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: edgecore,eap101
+
+
+Target-Profile-Description:
+Build firmware images for EdgeCore EAP101
+
+
+
+@@
+
+Target-Profile: DEVICE_indio_um-310ax-v1
+Target-Profile-Name: Indio UM-310AX V1
+Target-Profile-Packages: ath11k-wifi-indio-um-310ax-v1 uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: indio,um-310ax-v1
+
+
+Target-Profile-Description:
+Build firmware images for Indio UM-310AX V1
+
+
+
+@@
+
+Target-Profile: DEVICE_indio_um-510axp-v1
+Target-Profile-Name: Indio UM-510AXP V1
+Target-Profile-Packages: ath11k-wifi-indio-um-510axp-v1 uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: indio,um-510axp-v1
+
+
+Target-Profile-Description:
+Build firmware images for Indio UM-510AXP V1
+
+
+
+@@
+
+Target-Profile: DEVICE_indio_um-510axm-v1
+Target-Profile-Name: Indio UM-510AXM V1
+Target-Profile-Packages: ath11k-wifi-indio-um-510axm-v1 uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: indio,um-510axm-v1
+
+
+Target-Profile-Description:
+Build firmware images for Indio UM-510AXM V1
+
+
+
+@@
+
+Target-Profile: DEVICE_wallys_dr6018
+Target-Profile-Name: Wallys DR6018
+Target-Profile-Packages: ath11k-wifi-wallys-dr6018 uboot-envtools -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 kmod-usb2 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: wallys,dr6018
+
+
+Target-Profile-Description:
+Build firmware images for Wallys DR6018
+
+
+
+@@
+
+Target-Profile: DEVICE_wallys_dr6018_v4
+Target-Profile-Name: Wallys DR6018 V4
+Target-Profile-Packages: ath11k-wifi-wallys-dr6018-v4 uboot-envtools ath11k-firmware-qcn9000 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: wallys,dr6018-v4
+
+
+Target-Profile-Description:
+Build firmware images for Wallys DR6018 V4
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_cp01_c1
+Target-Profile-Name: Qualcomm Cypress C1
+Target-Profile-Packages: ath11k-wifi-qcom-ipq6018 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq6018-cp01
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm Cypress C1
+
+
+
+@@
+
+Target-Profile: DEVICE_glinet_ax1800
+Target-Profile-Name: GL-iNet AX1800
+Target-Profile-Packages: ath11k-wifi-gl-ax1800 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: glinet,ax1800
+
+
+Target-Profile-Description:
+Build firmware images for GL-iNet AX1800
+
+
+
+@@
+
+Target-Profile: DEVICE_glinet_axt1800
+Target-Profile-Name: GL-iNet AXT1800
+Target-Profile-Packages: ath11k-wifi-gl-axt1800 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: glinet,axt1800
+
+
+Target-Profile-Description:
+Build firmware images for GL-iNet AXT1800
+
+
+
+@@
+
+Target-Profile: DEVICE_yuncore_ax840
+Target-Profile-Name: YunCore AX840
+Target-Profile-Packages: ath11k-wifi-yuncore-ax840 uboot-env 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: yuncore,ax840
+
+
+Target-Profile-Description:
+Build firmware images for YunCore AX840
+
+
+
+@@
+
+Target-Profile: DEVICE_plasmacloud_pax1800-v1
+Target-Profile-Name: Plasma Cloud PAX1800 v1
+Target-Profile-Packages: uboot-envtools ath11k-wifi-plasmacloud-pax1800 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: plasmacloud,pax1800-v1
+
+
+Target-Profile-Description:
+Build firmware images for Plasma Cloud PAX1800 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_plasmacloud_pax1800-v2
+Target-Profile-Name: Plasma Cloud PAX1800 v2
+Target-Profile-Packages: uboot-envtools ath11k-wifi-plasmacloud-pax1800 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: plasmacloud,pax1800-v2
+
+
+Target-Profile-Description:
+Build firmware images for Plasma Cloud PAX1800 v2
+
+
+
+@@
+
+Target-Profile: DEVICE_meshpp_s618_cp03
+Target-Profile-Name: S618 cp03
+Target-Profile-Packages: ath11k-wifi-meshpp-s618 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: meshpp,s618-cp03
+
+
+Target-Profile-Description:
+Build firmware images for S618 cp03
+
+
+
+@@
+
+Target-Profile: DEVICE_meshpp_s618_cp01
+Target-Profile-Name: S618 cp01
+Target-Profile-Packages: ath11k-wifi-meshpp-s618 -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: meshpp,s618-cp01
+
+
+Target-Profile-Description:
+Build firmware images for S618 cp01
+
+
+
+@@
+
+Target-Profile: DEVICE_yuncore_fap650
+Target-Profile-Name: YunCore FAP 650
+Target-Profile-Packages: ath11k-wifi-yuncore-fap650 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: yuncore,fap650
+
+
+Target-Profile-Description:
+Build firmware images for YunCore FAP 650
+
+
+
+@@
+
+Target: ipq807x/ipq50xx
+Target-Board: ipq807x
+Target-Name: IPQ50XX
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a7
+Target-Features: arm_v7 display dt gpio nand pci pcie ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a7
+Linux-Version: 4.4.60
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build firmware image for IPQ50xx SoC devices.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd qca-nss-fw-ipq50xx dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-qca-nss-dp kmod-qca-ssdk swconfig kmod-qca-nss-drv kmod-usb-phy-ipq807x kmod-usb-dwc3-of-simple kmod-ath11k-ahb kmod-qrtr_mproc wpad kmod-gpio-button-hotplug kmod-bootconfig qca-thermald-10.4 qca-ssdk-shell uboot-envtools iwinfo
+Target-Profile: DEVICE_cig_wf186w
+Target-Profile-Name: Cigtech WF-186w
+Target-Profile-Packages: ath11k-wifi-cig-wf186w ath11k-firmware-ipq50xx-map-spruce 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf186w
+
+
+Target-Profile-Description:
+Build firmware images for Cigtech WF-186w
+
+
+
+@@
+
+Target-Profile: DEVICE_cig_wf186h
+Target-Profile-Name: Cigtech WF-186h
+Target-Profile-Packages: ath11k-wifi-cig-wf186h ath11k-firmware-ipq50xx-map-spruce 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cig,wf186h
+
+
+Target-Profile-Description:
+Build firmware images for Cigtech WF-186h
+
+
+
+@@
+
+Target-Profile: DEVICE_cybertan_eww622_a1
+Target-Profile-Name: CyberTan EWW622-A1
+Target-Profile-Packages: ath11k-wifi-cybertan-eww622-a1 ath11k-firmware-ipq50xx ath11k-firmware-qcn9000 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cybertan,eww622-a1
+
+
+Target-Profile-Description:
+Build firmware images for CyberTan EWW622-A1
+
+
+
+@@
+
+Target-Profile: DEVICE_cybertan_eww631_a1
+Target-Profile-Name: CyberTan EWW631-A1
+Target-Profile-Packages: ath11k-wifi-cybertan-eww631-a1 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cybertan,eww631-a1
+
+
+Target-Profile-Description:
+Build firmware images for CyberTan EWW631-A1
+
+
+
+@@
+
+Target-Profile: DEVICE_wallys_dr5018
+Target-Profile-Name: Wallys DR5018
+Target-Profile-Packages: ath11k-wifi-wallys-dr5018 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: wallys,dr5018
+
+
+Target-Profile-Description:
+Build firmware images for Wallys DR5018
+
+
+
+@@
+
+Target-Profile: DEVICE_wallys_dr5018_9074
+Target-Profile-Name: Wallys DR5018-9074
+Target-Profile-Packages: ath11k-wifi-wallys-dr5018-9074 ath11k-firmware-ipq50xx ath11k-firmware-qcn9000 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: wallys,dr5018-9074
+
+
+Target-Profile-Description:
+Build firmware images for Wallys DR5018-9074
+
+
+
+@@
+
+Target-Profile: DEVICE_cybertan_eww631_b1
+Target-Profile-Name: CyberTan EWW631-B1
+Target-Profile-Packages: ath11k-wifi-cybertan-eww631-b1 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cybertan,eww631-b1
+
+
+Target-Profile-Description:
+Build firmware images for CyberTan EWW631-B1
+
+
+
+@@
+
+Target-Profile: DEVICE_edgecore_eap104
+Target-Profile-Name: EdgeCore EAP104
+Target-Profile-Packages: ath11k-wifi-edgecore-eap104 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: edgecore,eap104
+
+
+Target-Profile-Description:
+Build firmware images for EdgeCore EAP104
+
+
+
+@@
+
+Target-Profile: DEVICE_liteon_wpx8324
+Target-Profile-Name: Liteon WPX8324
+Target-Profile-Packages: ath11k-wifi-liteon-wpx8324 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: liteon,wpx8324
+
+
+Target-Profile-Description:
+Build firmware images for Liteon WPX8324
+
+
+
+@@
+
+Target-Profile: DEVICE_muxi_ap3220l
+Target-Profile-Name: MUXI AP3220L
+Target-Profile-Packages: ath11k-wifi-muxi-ap3220l ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: muxi,ap3220l
+
+
+Target-Profile-Description:
+Build firmware images for MUXI AP3220L
+
+
+
+@@
+
+Target-Profile: DEVICE_motorola_q14
+Target-Profile-Name: Motorola Q14
+Target-Profile-Packages: ath11k-wifi-motorola-q14 ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: motorola,q14
+
+
+Target-Profile-Description:
+Build firmware images for Motorola Q14
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_mp03_1
+Target-Profile-Name: Qualcomm Maple 03.1
+Target-Profile-Packages: ath11k-wifi-qcom-ipq5018 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq5018-mp03.1
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm Maple 03.1
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_mp03_3
+Target-Profile-Name: Qualcomm Maple 03.3
+Target-Profile-Packages: ath11k-wifi-qcom-ipq5018 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq5018-mp03.3
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm Maple 03.3
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4xi_w
+Target-Profile-Name: HFCL ION4xi_w
+Target-Profile-Packages: ath11k-wifi-hfcl-ion4xi_w ath11k-firmware-ipq50xx-map-spruce 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4xi_w
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4xi_w
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4x_w
+Target-Profile-Name: HFCL ION4x_w
+Target-Profile-Packages: ath11k-wifi-hfcl-ion4x_w ath11k-firmware-ipq50xx-map-spruce 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4x_w
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4x_w
+
+
+
+@@
+
+Target-Profile: DEVICE_hfcl_ion4xi_HMR
+Target-Profile-Name: HFCL ION4xi_HMR
+Target-Profile-Packages: ath11k-wifi-hfcl-ion4xi_HMR ath11k-firmware-ipq50xx-map-spruce 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: hfcl,ion4xi_HMR
+
+
+Target-Profile-Description:
+Build firmware images for HFCL ION4xi_HMR
+
+
+
+@@
+
+Target-Profile: DEVICE_yuncore_fap655
+Target-Profile-Name: Yuncore FAP650
+Target-Profile-Packages: ath11k-wifi-yuncore-fap655 ath11k-firmware-ipq50xx-map-spruce -kmod-usb-dwc3-of-simple kmod-usb-dwc3-qcom kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: yuncore,fap655
+
+
+Target-Profile-Description:
+Build firmware images for Yuncore FAP650
+
+
+
+@@
+
+Target-Profile: DEVICE_xunison_d50-5g
+Target-Profile-Name: Xunison D50-5G
+Target-Profile-Packages: ath11k-wifi-xunison-d50 ath11k-firmware-ipq50xx ath11k-firmware-qcn9000  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: xunison,d50_5g
+
+
+Target-Profile-Description:
+Build firmware images for Xunison D50-5G
+
+
+
+@@
+
+Target-Profile: DEVICE_xunison_d50
+Target-Profile-Name: Xunison D50
+Target-Profile-Packages: ath11k-wifi-xunison-d50 ath11k-firmware-ipq50xx ath11k-firmware-qcn9000 ath11k-firmware-qcn6122 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: xunison,d50
+
+
+Target-Profile-Description:
+Build firmware images for Xunison D50
+
+
+
+@@
+
+

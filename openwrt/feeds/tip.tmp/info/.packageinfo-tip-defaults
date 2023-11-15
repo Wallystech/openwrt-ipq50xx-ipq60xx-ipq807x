@@ -1,0 +1,21 @@
+Source-Makefile: feeds/tip/tip-defaults/Makefile
+
+Package: tip-defaults
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: tip-defaults
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description:  The default configuration of the AP.
+John Crispin <john@phrozen.org>
+@@
+
+

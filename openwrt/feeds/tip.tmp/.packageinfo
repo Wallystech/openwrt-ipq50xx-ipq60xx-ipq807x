@@ -1,0 +1,149 @@
+Source-Makefile: feeds/tip/certificates/Makefile
+
+Package: certificates
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: TIP DigiCer certificate store
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: TIP DigiCer certificate store
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/tip/firstcontact/Makefile
+
+Package: firstcontact
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libcurl +libopenssl +certificates
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: TIP DigiCert firstcontact
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: TIP DigiCert firstcontact
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/tip/luci/luci-mod-ucentral/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-mod-ucentral
+Submenu: 2. Modules
+Version: x
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci-base
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI uCentral Configuration
+Maintainer: 
+Source: 
+License: Apache-2.0
+Type: ipkg
+Description: LuCI uCentral Configuration
+
+@@
+
+Package: luci-i18n-ucentral-de
+Default: LUCI_LANG_de||(ALL&&m)
+Version: x
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-mod-ucentral
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-mod-ucentral - de translation
+Maintainer: 
+Source: 
+License: Apache-2.0
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-mod-ucentral - Deutsch (German)
+
+@@
+
+
+Source-Makefile: feeds/tip/luci/luci-theme-ucentral/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-theme-ucentral
+Submenu: 4. Themes
+Version: x
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI theme for uCentral
+Maintainer: 
+Source: 
+Type: ipkg
+Description: LuCI theme for uCentral
+
+@@
+
+
+Source-Makefile: feeds/tip/maverick/Makefile
+
+Package: maverick
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: TIP maverick
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: TIP maverick
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/tip/tip-defaults/Makefile
+
+Package: tip-defaults
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: tip-defaults
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description:  The default configuration of the AP.
+John Crispin <john@phrozen.org>
+@@
+
+

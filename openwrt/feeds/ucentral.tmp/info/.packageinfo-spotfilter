@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/spotfilter/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: spotfilter
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-bpf +kmod-ifb @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Network filter for hotspot services
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Network filter for hotspot services
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

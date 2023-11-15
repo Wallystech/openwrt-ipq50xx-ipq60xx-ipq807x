@@ -1,0 +1,20 @@
+Source-Makefile: feeds/ucentral/usteer/Makefile
+
+Package: usteer
+Version: 2021-04-19-f42bf2962edd0199e4c96ebf19933b2846bcce27-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libblobmsg-json +libnl-tiny +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: OpenWrt AP roaming assist daemon
+Maintainer: 
+Source: usteer-2021-04-19-f42bf2962edd0199e4c96ebf19933b2846bcce27.tar.xz
+Type: ipkg
+Description: OpenWrt AP roaming assist daemon
+
+@@
+
+

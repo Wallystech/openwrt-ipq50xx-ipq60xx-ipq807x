@@ -1,0 +1,54 @@
+Source-Makefile: feeds/ipq807x/qca-nss-fw/Makefile
+
+Package: qca-nss-fw-ipq50xx
+Version: 383
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq50xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: NSS firmware for IPQ50xx devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Retail NSS firmware for IPQ50xx from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: qca-nss-fw-ipq60xx
+Version: 383
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq60xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: NSS firmware for IPQ60xx devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Retail NSS firmware for IPQ60xx from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: qca-nss-fw-ipq807x
+Version: 383
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: NSS firmware for IPQ807x devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Retail NSS firmware for IPQ807x from QCA
+John Crispin <john@phrozen.org>
+@@
+
+

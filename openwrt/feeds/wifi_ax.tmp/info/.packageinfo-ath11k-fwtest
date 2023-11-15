@@ -1,0 +1,21 @@
+Source-Makefile: feeds/wifi_ax/ath11k-fwtest/Makefile
+
+Package: ath11k-fwtest
+Version: 1.0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libnl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: QCA
+Category: QCA
+Repository: base
+Title: QCA ath11k fwtest utility
+Maintainer: Qualcomm Atheros, Inc.
+Source: 
+Type: ipkg
+Description:   This Package contains ath11k fwtest utility
+http://www.qca.qualcomm.com
+Qualcomm Atheros, Inc.
+@@
+
+

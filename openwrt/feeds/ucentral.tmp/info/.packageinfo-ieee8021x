@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/ieee8021x/Makefile
+
+Package: ieee8021x
+Version: 2023-08-21-560fe3003fa2a5837b351dba78a4d6652142ce90-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Wired 802.1x
+Maintainer: John Crispin <john@phrozen.org>
+Source: ieee8021x-2023-08-21-560fe3003fa2a5837b351dba78a4d6652142ce90.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: Wired 802.1x
+John Crispin <john@phrozen.org>
+@@
+
+

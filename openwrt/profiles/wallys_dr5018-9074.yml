@@ -1,0 +1,14 @@
+---
+profile: wallys_dr5018_9074
+target: ipq807x
+subtarget: ipq50xx
+description: Build image for the Wallys_DR5018-9074
+image: bin/targets/ipq807x/ipq50xx/openwrt-ipq807x-wallys-dr5018-9074-squashfs-sysupgrade.tar
+feeds:
+  - name: ipq807x
+    path: ../../feeds/ipq807x
+include:
+  - wifi-ax
+  - ucentral-ap
+packages:
+  - ipq807x

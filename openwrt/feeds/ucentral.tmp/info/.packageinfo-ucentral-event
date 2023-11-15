@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/ucentral-event/Makefile
+
+Package: ucentral-event
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: uCentral event gathering daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: uCentral event gathering daemon
+John Crispin <john@phrozen.org>
+@@
+
+

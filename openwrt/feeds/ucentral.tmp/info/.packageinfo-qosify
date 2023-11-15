@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/qosify/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: qosify
+Version: 2023-07-20-850cc271083d0ad4c3b2eefddb61f376390ddf62-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-cake +kmod-sched-bpf +kmod-ifb +tc @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Title: A simple QoS solution based eBPF + CAKE
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: qosify-2023-07-20-850cc271083d0ad4c3b2eefddb61f376390ddf62.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: A simple QoS solution based eBPF + CAKE
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

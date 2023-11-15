@@ -1,0 +1,7 @@
+---
+profile: rpi-2
+target: bcm27xx
+subtarget: bcm2709
+description: Build image for the Raspberry Pi
+include:
+  - ucentral-gateway

@@ -3,4 +3,3 @@
 # tftpboot 0x44000000 firmware
 # imxtract 0x44000000 ubi
 # flash rootfsi
-#GXGTEST

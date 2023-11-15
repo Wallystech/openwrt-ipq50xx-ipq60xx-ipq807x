@@ -1,0 +1,16 @@
+diff -urN apk-2021-08-17-a46043bc.orig/src/Makefile apk-2021-08-17-a46043bc/src/Makefile
+--- apk-2021-08-17-a46043bc.orig/src/Makefile	2021-08-17 14:21:04.117760513 +0200
++++ apk-2021-08-17-a46043bc/src/Makefile	2021-08-17 14:21:16.653830180 +0200
+@@ -65,7 +65,11 @@
+ 	app_convdb.o app_convndx.o app_del.o app_dot.o app_extract.o app_fetch.o \
+ 	app_fix.o app_index.o app_info.o app_list.o app_manifest.o app_mkndx.o \
+ 	app_mkpkg.o app_policy.o app_update.o app_upgrade.o app_search.o \
+-	app_stats.o app_verify.o app_version.o app_vertest.o applet.o
++	app_stats.o app_verify.o app_version.o app_vertest.o applet.o \
++	adb.o adb_comp.o adb_walk_adb.o adb_walk_genadb.o adb_walk_gentext.o adb_walk_text.o apk_adb.o \
++	atom.o blob.o commit.o common.o context.o crypto_openssl.o database.o hash.o \
++	extract.o extract_v2.o extract_v3.o io.o io_gunzip.o io_url.o tar.o \
++	package.o pathbuilder.o print.o solver.o trust.o version.o
+ 
+ ifeq ($(ADB),y)
+ libapk.so.$(libapk_soname)-objs += apk_adb.o

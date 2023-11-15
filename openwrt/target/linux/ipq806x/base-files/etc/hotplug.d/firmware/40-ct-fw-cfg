@@ -1,0 +1,32 @@
+#!/bin/sh
+
+[ -e /lib/firmware/$FIRMWARE ] && exit 0
+
+
+fwcfg_symlink() {
+	local chip=$1
+	local path=$2
+
+	ln -s /lib/firmware/ath10k/fwcfg-${chip}.txt /lib/firmware/${FIRMWARE}
+}
+
+case "$FIRMWARE" in                                                         
+ath10k/fwcfg-pci-0001:01:00.0.txt)
+	case "$(board_name)" in
+	edgecore,ssw2ac2600|\
+	edgecore,ecw5410)
+		fwcfg_symlink qca9984
+		;;
+	esac
+	;;
+ath10k/fwcfg-pci-0002:01:00.0.txt)
+	case "$(board_name)" in
+	edgecore,ssw2ac2600|\
+	edgecore,ecw5410)
+		fwcfg_symlink qca9984
+		;;	
+	esac
+	;;
+esac
+
+exit 0

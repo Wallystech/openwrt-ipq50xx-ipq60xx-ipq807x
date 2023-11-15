@@ -1,0 +1,28 @@
+From b08e6ce0ebf0cd5aa7a6ed463a83160634ad9693 Mon Sep 17 00:00:00 2001
+From: John Crispin <john@phrozen.org>
+Date: Tue, 4 May 2021 10:37:41 +0200
+Subject: [PATCH] procd: add tip revision info to system.board call
+
+Signed-off-by: John Crispin <john@phrozen.org>
+---
+ system.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/system.c b/system.c
+index 83aea42..8a87566 100644
+--- a/system.c
++++ b/system.c
+@@ -197,6 +197,10 @@ static int system_board(struct ubus_context *ctx, struct ubus_object *obj,
+ 				key = "target";
+ 			else if (!strcasecmp(key, "DISTRIB_DESCRIPTION"))
+ 				key = "description";
++			else if (!strcasecmp(key, "DISTRIB_TIP"))
++				key = "tip-revision";
++			else if (!strcasecmp(key, "DISTRIB_TIP_VERSION"))
++				key = "tip-version";
+ 			else
+ 				continue;
+ 
+-- 
+2.25.1
+

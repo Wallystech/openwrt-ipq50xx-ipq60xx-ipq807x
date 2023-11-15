@@ -1,0 +1,23 @@
+--- a/drivers/gpio/gpio-rtl838x.c
++++ b/drivers/gpio/gpio-rtl838x.c
+@@ -348,6 +348,9 @@ static int rtl838x_gpio_probe(struct pla
+ 	case 0x8391:
+ 		pr_debug("Found RTL8391 GPIO\n");
+ 		break;
++	case 0x8392:
++		pr_debug("Found RTL8392 GPIO\n");
++		break;
+ 	case 0x8393:
+ 		pr_debug("Found RTL8393 GPIO\n");
+ 		break;
+--- a/drivers/net/phy/rtl83xx-phy.c
++++ b/drivers/net/phy/rtl83xx-phy.c
+@@ -1399,7 +1399,7 @@ static int rtl8380_configure_rtl8214fc(s
+ 	for (i = 0; i < 4; i++) {
+ 		for (l = 0; l < 100; l++) {
+ 			read_phy(mac + i, 0xb80, 0x10, &val);
+-			if (val & 0x40)
++			if (val & 0x80)
+ 				break;
+ 		}
+ 		if (l >= 100) {

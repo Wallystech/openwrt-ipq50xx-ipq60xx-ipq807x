@@ -1,0 +1,20 @@
+Source-Makefile: feeds/ipq807x/aq-fw-download/Makefile
+
+Package: aq-fw-download
+Version: 1.0-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq806x||TARGET_ipq||TARGET_ipq40xx||TARGET_ipq807x_32||TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Aquantia FW downloader utitlity
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Aquantia FW downloader utitlity
+
+@@
+
+

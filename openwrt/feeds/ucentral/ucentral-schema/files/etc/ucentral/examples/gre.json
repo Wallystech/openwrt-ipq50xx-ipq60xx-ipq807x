@@ -1,0 +1,99 @@
+{
+	"uuid": 2,
+	"radios": [
+		{
+			"band": "2G",
+			"country": "CA",
+			"channel-mode": "HE",
+			"channel-width": 20,
+			"channel": 1
+		}
+	],
+
+	"interfaces": [
+		{
+			"name": "WAN",
+			"role": "upstream",
+			"ethernet": [
+				{
+					"select-ports": [
+						"WAN*"
+					]
+				}
+			],
+			"ipv4": {
+				"addressing": "dynamic"
+			}
+		},
+		{
+			"name": "GRE",
+			"role": "upstream",
+			"vlan": {
+				"id": 50
+			},
+			"tunnel": {
+				"proto": "gre",
+				"peer-address": "192.168.178.59"
+			},
+			"ipv4": {
+				"addressing": "static",
+				"subnet": "192.168.2.2/24",
+				"gateway": "192.168.2.1"
+			},
+			"ssids": [
+				{
+					"name": "OpenWifi-GRE",
+					"wifi-bands": [
+						"2G"
+					],
+					"bss-mode": "ap",
+					"encryption": {
+						"proto": "psk2",
+						"key": "OpenWifi",
+						"ieee80211w": "optional"
+					}
+				}
+			]
+		},
+		{
+			"name": "LAN",
+			"role": "downstream",
+			"services": [ "ssh" ],
+			"ethernet": [
+				{
+					"select-ports": [
+						"LAN*"
+					]
+				}
+			],
+			"ipv4": {
+				"addressing": "static",
+				"subnet": "192.168.1.1/24",
+				"dhcp": {
+					"lease-first": 10,
+					"lease-count": 100,
+					"lease-time": "6h"
+				}
+			},
+			"ssids": [
+				{
+					"name": "OpenWifi-GRE-NAT",
+					"wifi-bands": [
+						"2G"
+					],
+					"bss-mode": "ap",
+					"encryption": {
+						"proto": "psk2",
+						"key": "OpenWifi",
+						"ieee80211w": "optional"
+					}
+				}
+			]
+		}
+	],
+	"services": {
+		"ssh": {
+			"port": 22
+		}
+	}
+}

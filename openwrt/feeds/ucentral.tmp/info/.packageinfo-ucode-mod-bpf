@@ -1,0 +1,26 @@
+Source-Makefile: feeds/ucentral/ucode-mod-bpf/Makefile
+Build-Depends: !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: ucode-mod-bpf
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libucode +libbpf
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: ucode eBPF module
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: ISC
+Type: ipkg
+Description: The bpf plugin provides functionality for loading and interacting with
+eBPF modules.
+
+It allows loading full modules and pinned maps/programs and supports
+interacting with maps and attaching programs as tc classifiers.
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

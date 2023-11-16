@@ -1,0 +1,24 @@
+Source-Makefile: feeds/ipq807x/wireguard/Makefile
+
+Package: kmod-wireguard-backport
+Submenu: Network Support
+Version: <LINUX_VERSION>+1.0.20211208-1
+Depends: +IPV6:kmod-udptunnel6 +kmod-udptunnel4
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: WireGuard kernel module
+Maintainer: 
+Source: wireguard-linux-compat-1.0.20211208.tar.xz
+License: GPL-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description:   
+
+  This package provides the kernel module for WireGuard.
+
+@@
+
+

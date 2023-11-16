@@ -1,0 +1,20 @@
+Source-Makefile: feeds/ucentral/ratelimit/Makefile
+
+Package: ratelimit
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +tc +kmod-ifb
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Wireless ratelimiting
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: 	Allow Wireless client rate limiting
+John Crispin <john@phrozen.org>
+@@
+
+

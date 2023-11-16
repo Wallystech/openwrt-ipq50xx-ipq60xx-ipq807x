@@ -1,0 +1,20 @@
+Source-Makefile: feeds/ipq807x/qca-nss-drv/Makefile
+
+Package: kmod-qca-nss-drv
+Submenu: Network Devices
+Version: <LINUX_VERSION>-2
+Depends: @TARGET_ipq807x +kmod-qca-nss-dp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (core driver)
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Kernel driver for NSS (core driver)
+
+@@
+
+

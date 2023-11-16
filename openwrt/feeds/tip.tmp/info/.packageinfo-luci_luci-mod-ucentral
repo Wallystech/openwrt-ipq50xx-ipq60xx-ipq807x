@@ -1,0 +1,43 @@
+Source-Makefile: feeds/tip/luci/luci-mod-ucentral/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-mod-ucentral
+Submenu: 2. Modules
+Version: x
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci-base
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI uCentral Configuration
+Maintainer: 
+Source: 
+License: Apache-2.0
+Type: ipkg
+Description: LuCI uCentral Configuration
+
+@@
+
+Package: luci-i18n-ucentral-de
+Default: LUCI_LANG_de||(ALL&&m)
+Version: x
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread luci-mod-ucentral
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-mod-ucentral - de translation
+Maintainer: 
+Source: 
+License: Apache-2.0
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-mod-ucentral - Deutsch (German)
+
+@@
+
+

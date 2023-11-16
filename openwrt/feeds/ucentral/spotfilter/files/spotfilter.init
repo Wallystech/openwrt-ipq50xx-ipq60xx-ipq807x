@@ -1,0 +1,34 @@
+#!/bin/sh /etc/rc.common
+# Copyright (c) 2021 OpenWrt.org
+
+START=18
+
+USE_PROCD=1
+PROG=/usr/sbin/spotfilter
+
+add_interface() {
+	local cfg="$1"
+	local enabled
+
+	config_get_bool enabled "$cfg" "configure_spotfilter" 0
+	[ $enabled -eq 0 ] || /usr/bin/captive generate "$cfg" > /tmp/spotfilter-$cfg.json
+	ubus call spotfilter interface_add "$(cat /tmp/spotfilter-$cfg.json)"
+	sleep 5
+}
+
+reload_service() {
+	config_load uspot
+	config_foreach add_interface uspot
+}
+
+start_service() {
+	procd_open_instance
+	procd_set_param command "$PROG"
+	procd_set_param respawn
+	procd_close_instance
+}
+
+service_started() {
+	ubus -t 10 wait_for spotfilter
+	[ $? = 0 ] && reload_service
+}

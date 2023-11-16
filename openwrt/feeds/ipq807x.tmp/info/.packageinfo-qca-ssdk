@@ -1,0 +1,20 @@
+Source-Makefile: feeds/ipq807x/qca-ssdk/Makefile
+
+Package: kmod-qca-ssdk
+Submenu: Network Devices
+Version: <LINUX_VERSION>-
+Depends: 
+Conflicts: 
+Menu-Depends: 
+Provides: qca-ssdk
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for QCA SSDK
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Kernel driver for QCA SSDK
+
+@@
+
+

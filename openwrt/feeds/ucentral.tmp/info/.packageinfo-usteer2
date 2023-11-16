@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/usteer2/Makefile
+
+Package: usteer2
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucrun
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: wifi client steering
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: ISC
+Type: ipkg
+Description: wifi client steering
+John Crispin <john@phrozen.org>
+@@
+
+

@@ -1,0 +1,1086 @@
+Source-Makefile: feeds/ucentral/atfpolicy/Makefile
+
+Package: atfpolicy
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libnl-tiny
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A simple daemon for handling airtime fairness prioritization
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: A simple daemon for handling airtime fairness prioritization
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/bluez/Makefile
+Build-Depends: !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: bluez-libs
+Version: 5.66-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +USB_SUPPORT:kmod-bluetooth
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Bluetooth library
+Maintainer: 
+Source: bluez-5.66.tar.xz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Bluetooth library
+http://www.bluez.org/
+
+@@
+
+Package: bluez-utils
+Version: 5.66-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bluez-libs
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Bluetooth utilities
+Maintainer: 
+Source: bluez-5.66.tar.xz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Bluetooth utilities
+http://www.bluez.org/
+
+@@
+
+Package: bluez-utils-btmon
+Version: 5.66-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bluez-libs +glib2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Bluetooth utilities
+Maintainer: 
+Source: bluez-5.66.tar.xz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Bluetooth utilities
+http://www.bluez.org/
+
+@@
+
+Package: bluez-utils-extra
+Version: 5.66-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bluez-libs +libpthread +librt +glib2 +libncurses +libreadline +BUILD_NLS:libintl-full +BUILD_NLS:libiconv-full +dbus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Bluetooth additional utilities
+Maintainer: 
+Source: bluez-5.66.tar.xz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Bluetooth additional utilities
+http://www.bluez.org/
+
+@@
+
+Package: bluez-daemon
+Version: 5.66-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bluez-libs +bluez-utils +bluez-utils-extra +glib2 +libncurses +libreadline +dbus +libical +BUILD_NLS:libintl-full +BUILD_NLS:libiconv-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Bluetooth daemon
+Maintainer: 
+Source: bluez-5.66.tar.xz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Bluetooth daemon
+http://www.bluez.org/
+
+@@
+
+
+Source-Makefile: feeds/ucentral/bridger/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: bridger
+Version: 2023-05-12-3159bbe0a2ebcea9f209bbca88dcd5ac86f7a7f1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-core +kmod-sched-flower +kmod-sched-bpf +kmod-sched-act-vlan @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Repository: base
+Title: Bridge forwarding accelerator
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: bridger-2023-05-12-3159bbe0a2ebcea9f209bbca88dcd5ac86f7a7f1.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: Bridge forwarding accelerator
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/firewall4/Makefile
+
+Package: firewall4
+Version: 2021-03-31-29fba840201287b9265888adba6298779b750af5-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode +ucode-mod-fs +ucode-mod-uci +ucode-mod-ubus +kmod-nft-core +kmod-nft-fib +kmod-nft-nat +kmod-nft-nat6 +nftables-json
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Base system
+Repository: base
+Title: OpenWrt 4th gen firewall
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: firewall4-2021-03-31-29fba840201287b9265888adba6298779b750af5.tar.xz
+License: ISC
+Type: ipkg
+Description:  This package provides an nftables-based implementation of the UCI firewall
+ sharing the same configuration format.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+
+Source-Makefile: feeds/ucentral/ieee8021x/Makefile
+
+Package: ieee8021x
+Version: 2023-08-21-560fe3003fa2a5837b351dba78a4d6652142ce90-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Wired 802.1x
+Maintainer: John Crispin <john@phrozen.org>
+Source: ieee8021x-2023-08-21-560fe3003fa2a5837b351dba78a4d6652142ce90.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: Wired 802.1x
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/libwebsockets/Makefile
+
+Package: libwebsockets-openssl
+Version: 4.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libcap +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: libwebsockets
+Build-Variant: openssl
+Section: libs
+Category: Libraries
+Repository: base
+Title: libwebsockets (OpenSSL)
+Maintainer: Karl Palsson <karlp@etactica.com>
+Source: libwebsockets-4.1.4.tar.gz
+License: LGPL-2.1+exception
+LicenseFiles: LICENSE
+Type: ipkg
+Description: libwebsockets (OpenSSL)
+https://libwebsockets.org
+Karl Palsson <karlp@etactica.com>
+@@
+
+Package: libwebsockets-mbedtls
+Version: 4.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libcap +libmbedtls
+Conflicts: 
+Menu-Depends: 
+Provides: libwebsockets
+Build-Variant: mbedtls
+Section: libs
+Category: Libraries
+Repository: base
+Title: libwebsockets (mbedTLS)
+Maintainer: Karl Palsson <karlp@etactica.com>
+Source: libwebsockets-4.1.4.tar.gz
+License: LGPL-2.1+exception
+LicenseFiles: LICENSE
+Type: ipkg
+Description: libwebsockets (mbedTLS)
+https://libwebsockets.org
+Karl Palsson <karlp@etactica.com>
+@@
+
+Package: libwebsockets-full
+Version: 4.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libcap +libopenssl +libuv
+Conflicts: 
+Menu-Depends: 
+Provides: libwebsockets
+Build-Variant: full
+Section: libs
+Category: Libraries
+Repository: base
+Title: libwebsockets (Full - OpenSSL, libuv, plugins, CGI)
+Maintainer: Karl Palsson <karlp@etactica.com>
+Source: libwebsockets-4.1.4.tar.gz
+License: LGPL-2.1+exception
+LicenseFiles: LICENSE
+Type: ipkg
+Description: libwebsockets (Full - OpenSSL, libuv, plugins, CGI)
+https://libwebsockets.org
+Karl Palsson <karlp@etactica.com>
+@@
+
+
+Source-Makefile: feeds/ucentral/qosify/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: qosify
+Version: 2023-07-20-850cc271083d0ad4c3b2eefddb61f376390ddf62-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-cake +kmod-sched-bpf +kmod-ifb +tc @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Title: A simple QoS solution based eBPF + CAKE
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: qosify-2023-07-20-850cc271083d0ad4c3b2eefddb61f376390ddf62.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: A simple QoS solution based eBPF + CAKE
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/radius-gw-proxy/Makefile
+
+Package: radius-gw-proxy
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: uCentral Gateway radius-gw-proxy
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: uCentral Gateway radius-gw-proxy
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ratelimit/Makefile
+
+Package: ratelimit
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +tc +kmod-ifb
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Wireless ratelimiting
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: 	Allow Wireless client rate limiting
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/rtty/Makefile
+
+Package: rtty-openssl
+Submenu: Terminal
+Version: 7.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libev +PACKAGE_rtty-openssl:libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: rtty
+Build-Variant: openssl
+Section: utils
+Category: Utilities
+Repository: base
+Title: Access your terminals from anywhere via the web
+Maintainer: Jianhui Zhao <zhaojh329@gmail.com>
+Source: rtty-7.1.4.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Access your terminals from anywhere via the web
+https://github.com/zhaojh329/rtty
+Jianhui Zhao <zhaojh329@gmail.com>
+@@
+
+Package: rtty-wolfssl
+Submenu: Terminal
+Version: 7.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libev +PACKAGE_rtty-wolfssl:libwolfssl
+Conflicts: 
+Menu-Depends: 
+Provides: rtty
+Build-Variant: wolfssl
+Section: utils
+Category: Utilities
+Repository: base
+Title: Access your terminals from anywhere via the web
+Maintainer: Jianhui Zhao <zhaojh329@gmail.com>
+Source: rtty-7.1.4.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Access your terminals from anywhere via the web
+https://github.com/zhaojh329/rtty
+Jianhui Zhao <zhaojh329@gmail.com>
+@@
+
+Package: rtty-mbedtls
+Submenu: Terminal
+Version: 7.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libev +PACKAGE_rtty-mbedtls:libmbedtls +PACKAGE_rtty-mbedtls:zlib
+Conflicts: 
+Menu-Depends: 
+Provides: rtty
+Build-Variant: mbedtls
+Section: utils
+Category: Utilities
+Repository: base
+Title: Access your terminals from anywhere via the web
+Maintainer: Jianhui Zhao <zhaojh329@gmail.com>
+Source: rtty-7.1.4.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Access your terminals from anywhere via the web
+https://github.com/zhaojh329/rtty
+Jianhui Zhao <zhaojh329@gmail.com>
+@@
+
+Package: rtty-nossl
+Submenu: Terminal
+Version: 7.1.4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libev
+Conflicts: 
+Menu-Depends: 
+Provides: rtty
+Build-Variant: nossl
+Section: utils
+Category: Utilities
+Repository: base
+Title: Access your terminals from anywhere via the web
+Maintainer: Jianhui Zhao <zhaojh329@gmail.com>
+Source: rtty-7.1.4.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Access your terminals from anywhere via the web
+https://github.com/zhaojh329/rtty
+Jianhui Zhao <zhaojh329@gmail.com>
+@@
+
+
+Source-Makefile: feeds/ucentral/spotfilter/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: spotfilter
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-bpf +kmod-ifb @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Network filter for hotspot services
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Network filter for hotspot services
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/switch-fabric/Makefile
+
+Package: switch-fabric
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: switch-fabric
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description:  Allow configuring HW specific switch fabric features.
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucentral-client/Makefile
+
+Package: ucentral-client
+Version: 2022-06-22-3bbcd36c6111e08df6c8f13e0079826ec417cc85-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode +ucode-mod-fs +ucode-mod-ubus +ucode-mod-uci +ucode-mod-math +ucode-mod-resolv +ucode-mod-uloop +libubox +libwebsockets-openssl +libblobmsg-json +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral websocket client
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-client-2022-06-22-3bbcd36c6111e08df6c8f13e0079826ec417cc85.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral websocket client
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucentral-dataplane/Makefile
+
+Package: ucentral-dataplane
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +tc-full +kmod-ifb @!TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: uCentral xBPF loader
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: 	Allow loading cBPF and eBPF programs
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucentral-event/Makefile
+
+Package: ucentral-event
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: uCentral event gathering daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description: uCentral event gathering daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucentral-schema/Makefile
+
+Package: ucentral-recovery
+Version: 2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral recovery tooling
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-schema-2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral recovery tooling
+John Crispin <john@phrozen.org>
+@@
+
+Package: ucentral-schema
+Version: 2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode-mod-nl80211 +ucode-mod-rtnl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral schema
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-schema-2022-05-29-e9529eab9cae27f170bdb440eb60d7a0a2588cea.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral schema
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucentral-tools/Makefile
+
+Package: ucentral-tools
+Version: 2021-01-28-b013fc636e48d407870a46aaa68a09ed74de8d6f-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libcurl +libradcli +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: ucentral tools collection
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-tools-2021-01-28-b013fc636e48d407870a46aaa68a09ed74de8d6f.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: ucentral tools collection
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucode/Makefile
+Build-Types: host
+
+Package: libucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libjson-c
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Tiny scripting and templating language (library)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The libucode package provides the shared runtime library for the ucode interpreter.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libucode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  ucode is a tiny script interpreter featuring an ECMAScript oriented
+ script language and Jinja-inspired templating.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-fs
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (filesystem module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The filesystem plugin module allows interaction with the local file system.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-math
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (math module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The math plugin provides access to various <math.h> procedures.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-nl80211
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode +libnl-tiny +libubox +kmod-mac80211
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (nl80211 module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The nl80211 plugin provides access to the Linux wireless 802.11 netlink API.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-resolv
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (resolv module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The resolv plugin implements simple DNS resolving.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-rtnl
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode +libnl-tiny +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (rtnl module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The rtnl plugin provides access to the Linux routing netlink API.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-struct
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (struct module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The struct plugin implements Python 3 compatible struct.pack/unpack functionality.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-ubus
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode +libubus +libblobmsg-json
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (ubus module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The ubus module allows ucode template scripts to enumerate and invoke ubus
+ procedures.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-uci
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (uci module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The uci module allows templates to read and modify uci configuration.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: ucode-mod-uloop
+Submenu: ucode
+Version: 2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ucode +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: Tiny scripting and templating language (uloop module)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: ucode-2023-06-06-c7d84aae09691a99ae3db427c0b2463732ef84f4.tar.xz
+License: ISC
+Type: ipkg
+Description:  The uloop module allows ucode scripts to interact with OpenWrt uloop event
+ loop implementation.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucode-mod-bpf/Makefile
+Build-Depends: !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: ucode-mod-bpf
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libucode +libbpf
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: ucode eBPF module
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: ISC
+Type: ipkg
+Description: The bpf plugin provides functionality for loading and interacting with
+eBPF modules.
+
+It allows loading full modules and pinned maps/programs and supports
+interacting with maps and attaching programs as tc classifiers.
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/ucrun/Makefile
+
+Package: ucrun
+Version: 2022-02-19-5be6abebc4ae6057b47a5b3f0799d5ff01bc60c3-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +ucode +ucode-mod-uci +ucode-mod-ubus +ucode-mod-fs
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: uCode main-loop daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucrun-2022-02-19-5be6abebc4ae6057b47a5b3f0799d5ff01bc60c3.tar.xz
+License: GPL-2.0-only
+LicenseFiles: GPL
+Type: ipkg
+Description: uCode main-loop daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/udevmand/Makefile
+
+Package: udevmand
+Version: 20220112-979aca4764c10312b62b4e34c7e9f58e22f86b76-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubus +libblobmsg-json +ubusd +libjson-c +libnl-tiny +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: Network devman mapping daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: udevmand-20220112-979aca4764c10312b62b4e34c7e9f58e22f86b76.tar.xz
+License: LGPL-2.1
+Type: ipkg
+Description: Network devman mapping daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/udevstats/Makefile
+Build-Depends: bpf-headers
+
+Package: udevstats
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode +ucode-mod-ubus +ucode-mod-bpf +kmod-sched-bpf +ucode-mod-struct
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Device statistics module
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: Device statistics module
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/udhcprelay/Makefile
+
+Package: udhcprelay
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +kmod-ifb +tc +kmod-sched
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DHCP Relay Daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: DHCP Relay Daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/udhcpsnoop/Makefile
+
+Package: udhcpsnoop
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +kmod-ifb +tc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DHCP Snooping Daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: DHCP Snooping Daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/udnssnoop/Makefile
+
+Package: udnssnoop
+Version: 2021-04-12-67e1e5f0bfc12222aa59c54e7066b1c00a680e56-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DNS Snooping Daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: udnssnoop-2021-04-12-67e1e5f0bfc12222aa59c54e7066b1c00a680e56.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: DNS Snooping Daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/unetd/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: libunet
+Version: 2022-06-30-425e75e3c38a7f1b6b732ff6ad0475073a6125b6
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: unetd support library
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: unetd-2022-06-30-425e75e3c38a7f1b6b732ff6ad0475073a6125b6.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: unetd support library
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: unetd
+Version: 2022-06-30-425e75e3c38a7f1b6b732ff6ad0475073a6125b6
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libblobmsg-json +libnl-tiny +libunet +libbpf @HAS_BPF_TOOLCHAIN +(TARGET_ipq807x||TARGET_ipq60xx||TARGET_ipq50xx):kmod-wireguard-backport +!TARGET_ipq807x:kmod-wireguard +wireguard-tools
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Repository: base
+Title: OpenWrt wireguard overlay network configuration service
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: unetd-2022-06-30-425e75e3c38a7f1b6b732ff6ad0475073a6125b6.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt wireguard overlay network configuration service
+Felix Fietkau <nbd@nbd.name>
+@@
+
+
+Source-Makefile: feeds/ucentral/usb-console/Makefile
+
+Package: usb-console
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-usb-serial +kmod-usb-serial-cp210x +kmod-usb-serial-ftdi
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: usb-console
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: BSD-3-Clause
+Type: ipkg
+Description:  Allow spawning a console on a usbserial dongle.
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/uspot/Makefile
+
+Package: uspot
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +spotfilter +uhttpd-mod-ucode +libradcli +iptables-mod-conntrack-extra +conntrack +ucode-mod-math +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-uloop +ratelimit
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: hotspot daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: hotspot daemon
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/usteer/Makefile
+
+Package: usteer
+Version: 2021-04-19-f42bf2962edd0199e4c96ebf19933b2846bcce27-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libblobmsg-json +libnl-tiny +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: OpenWrt AP roaming assist daemon
+Maintainer: 
+Source: usteer-2021-04-19-f42bf2962edd0199e4c96ebf19933b2846bcce27.tar.xz
+Type: ipkg
+Description: OpenWrt AP roaming assist daemon
+
+@@
+
+
+Source-Makefile: feeds/ucentral/usteer2/Makefile
+
+Package: usteer2
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucrun
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: wifi client steering
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: ISC
+Type: ipkg
+Description: wifi client steering
+John Crispin <john@phrozen.org>
+@@
+
+
+Source-Makefile: feeds/ucentral/ustp/Makefile
+
+Package: ustp
+Version: 2021-08-27-25555611be916da7fe8cb53f85c741a51ddffa1c-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: OpenWrt STP/RSTP daemon
+Maintainer: Felix Fietkau <nbd@nbd.name
+Source: ustp-2021-08-27-25555611be916da7fe8cb53f85c741a51ddffa1c.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt STP/RSTP daemon
+Felix Fietkau <nbd@nbd.name
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/udnssnoop/Makefile
+
+Package: udnssnoop
+Version: 2021-04-12-67e1e5f0bfc12222aa59c54e7066b1c00a680e56-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DNS Snooping Daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: udnssnoop-2021-04-12-67e1e5f0bfc12222aa59c54e7066b1c00a680e56.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: DNS Snooping Daemon
+John Crispin <john@phrozen.org>
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/udevmand/Makefile
+
+Package: udevmand
+Version: 20220112-979aca4764c10312b62b4e34c7e9f58e22f86b76-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubus +libblobmsg-json +ubusd +libjson-c +libnl-tiny +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: Network devman mapping daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: udevmand-20220112-979aca4764c10312b62b4e34c7e9f58e22f86b76.tar.xz
+License: LGPL-2.1
+Type: ipkg
+Description: Network devman mapping daemon
+John Crispin <john@phrozen.org>
+@@
+
+

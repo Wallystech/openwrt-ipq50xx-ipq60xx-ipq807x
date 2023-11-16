@@ -1,0 +1,122 @@
+Source-Makefile: feeds/wifi_ax/ath11k-firmware/Makefile
+
+Package: ath11k-firmware-ipq50xx
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq50xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for IPQ50xx devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for IPQ50xx from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-ipq50xx-map-spruce
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq50xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for IPQ50xx+spruce devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for IPQ50xx+spruce from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-ipq50xx-spruce
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq50xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for IPQ50xx devices with spruce
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for IPQ50xx/spruce from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-ipq60xx
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq60xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for IPQ60xx devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for IPQ60xx from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-ipq807x
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for IPQ807x devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for IPQ807x from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-qcn6122
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x_ipq50xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for QCN6122 devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for QCN6122 from QCA
+John Crispin <john@phrozen.org>
+@@
+
+Package: ath11k-firmware-qcn9000
+Version: 19
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_ipq807x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Repository: base
+Title: ath11k firmware for QCN9000 devices
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+Type: ipkg
+Description: Standard ath11k firmware for QCN9000 from QCA
+John Crispin <john@phrozen.org>
+@@
+
+

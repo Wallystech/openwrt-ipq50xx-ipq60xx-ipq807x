@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/udhcpsnoop/Makefile
+
+Package: udhcpsnoop
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +kmod-ifb +tc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DHCP Snooping Daemon
+Maintainer: John Crispin <john@phrozen.org>
+Source: 
+License: GPL-2.0
+Type: ipkg
+Description: DHCP Snooping Daemon
+John Crispin <john@phrozen.org>
+@@
+
+

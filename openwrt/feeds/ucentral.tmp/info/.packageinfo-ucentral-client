@@ -1,0 +1,21 @@
+Source-Makefile: feeds/ucentral/ucentral-client/Makefile
+
+Package: ucentral-client
+Version: 2022-06-22-3bbcd36c6111e08df6c8f13e0079826ec417cc85-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ucode +ucode-mod-fs +ucode-mod-ubus +ucode-mod-uci +ucode-mod-math +ucode-mod-resolv +ucode-mod-uloop +libubox +libwebsockets-openssl +libblobmsg-json +libubus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: ucentral
+Category: uCentral
+Repository: base
+Title: OpenWrt uCentral websocket client
+Maintainer: John Crispin <john@phrozen.org>
+Source: ucentral-client-2022-06-22-3bbcd36c6111e08df6c8f13e0079826ec417cc85.tar.xz
+License: BSD-3-Clause
+Type: ipkg
+Description: OpenWrt uCentral websocket client
+John Crispin <john@phrozen.org>
+@@
+
+

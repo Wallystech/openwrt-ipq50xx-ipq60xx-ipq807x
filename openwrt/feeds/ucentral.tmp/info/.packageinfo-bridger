@@ -1,0 +1,22 @@
+Source-Makefile: feeds/ucentral/bridger/Makefile
+Build-Depends: bpf-headers !BUILD_NLS:libiconv !BUILD_NLS:gettext
+
+Package: bridger
+Version: 2023-05-12-3159bbe0a2ebcea9f209bbca88dcd5ac86f7a7f1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbpf +libubox +libubus +libnl-tiny +kmod-sched-core +kmod-sched-flower +kmod-sched-bpf +kmod-sched-act-vlan @HAS_BPF_TOOLCHAIN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Repository: base
+Title: Bridge forwarding accelerator
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: bridger-2023-05-12-3159bbe0a2ebcea9f209bbca88dcd5ac86f7a7f1.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: Bridge forwarding accelerator
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

@@ -173,6 +173,10 @@ $(call Package/ath11k-wifi-default)
     TITLE:=edgecore oap101 bdf
 endef
 
+define Package/ath11k-wifi-wallys-dr5018-9074
+$(call Package/ath11k-wifi-default)
+    TITLE:=wallys-dr5018 bdf
+endef
 
 define ath11k-wifi-install-one-to
   $(INSTALL_DIR)  $(2)/lib/firmware/$(3)/
@@ -347,6 +351,12 @@ define Package/ath11k-wifi-edgecore-oap101/install
 	$(INSTALL_DATA) ./board-2-edgecore-oap101.bin.QCN6122 $(1)/lib/firmware/ath11k/qcn6122/hw1.0/board-2.bin
 endef
 
+define Package/ath11k-wifi-wallys-dr5018-9074/install
+	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/IPQ5018/hw1.0/
+	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
+	$(INSTALL_DATA) ./board-wallys-dr5018-9074.bin.IPQ5018 $(1)/lib/firmware/ath11k/IPQ5018/hw1.0/board-2.bin
+	$(INSTALL_DATA) ./board-wallys-dr5018-9074.bin.QCN9074 $(1)/lib/firmware/ath11k/QCN9074/hw1.0/board-2.bin
+endef
 
 $(eval $(call generate-ath11k-wifi-package,cig-wf188,Cigtech WF188))
 $(eval $(call generate-ath11k-wifi-package,cig-wf186w,Cigtech WF186w))
@@ -360,7 +370,6 @@ $(eval $(call generate-ath11k-wifi-package,cybertan-eww622-a1,CyberTan EWW622 A1
 $(eval $(call generate-ath11k-wifi-package,cybertan-eww631-a1,CyberTan EWW631 A1))
 $(eval $(call generate-ath11k-wifi-package,cybertan-eww631-b1,CyberTan EWW631 B1))
 $(eval $(call generate-ath11k-wifi-package,sercomm-wallaby,Sercomm Kiwi))
-$(eval $(call generate-ath11k-wifi-package,wallys-dr5018-9074,Wallys Dr5018 9074))
 $(eval $(call generate-ath11k-wifi-package,wallys-dr5018,Wallys Dr5018))
 $(eval $(call generate-ath11k-wifi-package,wallys-dr6018,Wallys DR6018))
 $(eval $(call generate-ath11k-wifi-package,wallys-dr6018-v4,Wallys DR6018 V4))
@@ -397,4 +406,4 @@ $(eval $(call BuildPackage,ath11k-wifi-hfcl-ion4xi_w))
 $(eval $(call BuildPackage,ath11k-wifi-hfcl-ion4x_w))
 $(eval $(call BuildPackage,ath11k-wifi-hfcl-ion4xi_HMR))
 $(eval $(call BuildPackage,ath11k-wifi-edgecore-oap101))
-
+$(eval $(call BuildPackage,ath11k-wifi-wallys-dr5018-9074))
